@@ -135,3 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 We change crispy forms bootstrap because it comes by default on bootstrap2 and we need bootstrap4
 """
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# We send the user to this page after a successful login
+LOGIN_REDIRECT_URL = 'blog-home'
