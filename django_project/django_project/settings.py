@@ -138,3 +138,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # We send the user to this page after a successful login
 LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'
