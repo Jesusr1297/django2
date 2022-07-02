@@ -8,6 +8,10 @@ from users import views as user_views
 # module for easier login
 from django.contrib.auth import views as auth_views
 
+# media development
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -20,3 +24,6 @@ urlpatterns = [
 
     path('', include('blog.urls'))
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

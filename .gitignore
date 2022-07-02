@@ -1,1 +1,5 @@
 /.idea/
+/django_project/profile_pics
+
+/django_project/media/profile_pics/
+/django_project/media/

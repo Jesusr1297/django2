@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -139,3 +139,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # We send the user to this page after a successful login
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
+
+
+# MEDIA, this is where we are going to storage our profile pics and other media
+# Where people can access the media
+MEDIA_URL = '/media/'
+# Where our media is stored locally
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
