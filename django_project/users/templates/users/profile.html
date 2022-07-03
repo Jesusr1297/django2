@@ -9,5 +9,20 @@
                 <p class="text-secondary">{{ user.email }}</p>
                 </div>
             </div>
+    <form METHOD="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">
+                    Profile Info
+{#                    we used to use format below, but now added crispy_forms and to make it better #}
+{#                    {{ form.as_p }}#}
+                    {{ u_form|crispy }}
+                    {{ p_form|crispy }}
+                </legend>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Update</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
 {% endblock %}
